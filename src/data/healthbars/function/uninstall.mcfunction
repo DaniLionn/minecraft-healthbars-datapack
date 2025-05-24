@@ -1,5 +1,3 @@
-say Loaded!
-
 bossbar remove minecraft:healthbar
 scoreboard objectives remove ClosestMobHealth 
 scoreboard objectives remove ClosestMobHealthHalf 
