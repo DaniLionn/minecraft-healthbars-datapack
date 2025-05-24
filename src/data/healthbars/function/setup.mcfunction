@@ -1,5 +1,3 @@
-say Loaded!
-
 bossbar add healthbar ""
 bossbar set minecraft:healthbar style notched_10
 
