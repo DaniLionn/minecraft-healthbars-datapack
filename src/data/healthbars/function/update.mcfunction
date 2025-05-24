@@ -19,6 +19,7 @@ execute at @a[scores={ClosestMobHealth=1..}] run bossbar set minecraft:healthbar
 # execute as @a[scores={ClosestMobArmour=0}] run bossbar set minecraft:healthbar name ["",{"text":"\u2764\ufe0f"},{"score":{"name":"@p","objective":"ClosestMobHealth"}},{"text":" \u0020"},{"selector":"@e[sort=nearest,limit=1,type=!minecraft:item,type=!minecraft:player,type=!minecraft:experience_orb,distance=..10]"}]
 
 execute at @p run bossbar set minecraft:healthbar name ["",{"text":"\u2764","color":"red"},{"score":{"name":"@p","objective":"ClosestMobHealth"},"color":"red"},{"text":" \ud83d\udee1","color":"gray"},{"score":{"name":"@p","objective":"ClosestMobArmour"},"color":"gray"},{"text": " "},{"selector":"@e[sort=nearest,limit=1,type=!minecraft:item,type=!minecraft:player,type=!minecraft:experience_orb,distance=..10]"}]
+
 execute as @a if score @s ClosestMobHealth > @s ClosestMobHealthHalf run bossbar set minecraft:healthbar color green
 execute as @a if score @s ClosestMobHealth <= @s ClosestMobHealthHalf run bossbar set minecraft:healthbar color yellow
 execute as @a if score @s ClosestMobHealth <= @s ClosestMobHealthQuarter run bossbar set minecraft:healthbar color red
